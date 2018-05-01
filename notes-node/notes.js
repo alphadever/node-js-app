@@ -1,16 +1,24 @@
 /*jshint esversion: 6 */
 console.log('starting notes.js ...');
 
-// binding a property to module function
-module.exports.age = 25;
+var addNote = (title, body) => {
+    console.log('Adding note', title, body);
+};
 
-// void function attached to module object
-module.exports.addNote = () => {
-    console.log('addNote');
-    return 'here is the return !';
-}; 
+var getAll = () => {
+    console.log('Getting all notes');
+};
 
-// add function attached to module object
-module.exports.add = (x, y) => {
-    return x + y;
+var getNote = (title) => {
+    console.log('Getting note', title);
+};
+
+var removeNote = (title) => {
+    console.log('Removing note', title);
+};
+module.exports = {
+    addNote,
+    getAll,
+    getNote,
+    removeNote
 };
